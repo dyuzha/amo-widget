@@ -10,10 +10,10 @@
 
 <details>
     <summary>Развёртывание</summary>
-    
+
 - Склонировать репозиторий:
 
-        git clone https://github.com/jasper7466/Boilerplate-amoCRM-Widget.git
+        git clone https://github.com/dyuzha/amo-widget.git
 
 - Установить зависимости:
 
@@ -23,6 +23,14 @@
 
 <details>
     <summary>Режим разработки</summary>
+
+Нужное состояние файла `src/api/index.ts`
+Расширения должны быть `.js`!
+```ts
+import { IWidgetExtended } from '../interfaces/widget-extended.interface.js';
+import { getCrmContextMessageHandler } from './inbox-post-messages-handlers/get-crm-context.message-handler.js';
+import { httpProxyMessageHandler } from './inbox-post-messages-handlers/http-proxy.message-handler.js';
+```
 
 - Выполнить сборку виджета-загрузчика:
 
@@ -49,14 +57,28 @@ define([
 
         npm run start
 
+
 При этом проект будет автоматически пересобираться при детектировании изменений в \*.ts-файлах и файлах статики ( \*.css, \*.twig).
 
 Для применения изменений после очередной пересборки - достаточно лишь обновить вкладку amoCRM в браузере.
 
 </details>
 
-## Известные проблемы и что можно улучшить
+<details>
+    <summary>Режим продакшена</summary>
 
-- Реализовать полное покрытие amo-объектов типами. На данный момент типизация выполнена в рамках решаемой задачи и актуальна на дату публикации проекта
-- Есть проблемы с авто-подстановкой расширений '.js' для импортов. Неплохо было бы задействовать модульный сборщик (webpack или аналог) вместо самописных скриптов.
-- Единообразный стиль нейминга файлов (перейти на kebab-case).
+Нужное состояние файла `src/api/index.ts`
+Расширения должны отсутсвовать!
+```ts
+import { IWidgetExtended } from '../interfaces/widget-extended.interface';
+import { getCrmContextMessageHandler } from './inbox-post-messages-handlers/get-crm-context.message-handler';
+import { httpProxyMessageHandler } from './inbox-post-messages-handlers/http-proxy.message-handler';
+```
+
+- Выполнить сборку для продакшена через webpack:
+
+        npm run build-prod
+
+По завершении работы скрипта в директории `./dist` будет сформирован архив `widget.zip`.
+
+</details>
