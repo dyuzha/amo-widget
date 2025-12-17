@@ -1,0 +1,85 @@
+.resort_soft__container {
+  margin-top: 1em;
+}
+
+.resortsoft_card {
+  display: block;
+  border-top: 1px solid #ccc; /* полоска сверху остаётся */
+}
+
+.resortsoft_card__paidPrice {
+  margin: 1em 0;
+}
+
+.resortsoft_card b {
+  display: inline-block;
+  width: 120px;
+  color: #848c90;
+}
+
+.resortsoft_card__button {
+  color: #4c8bf7;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+/* Строка: Оплата | paidPrice */
+.resortsoft_paidPriceRow {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  gap: 7px;   /* как у Здравница ID */
+}
+
+/* Значение справа от "Оплата" */
+.resortsoft_paidPriceValue {
+  font-size: 14px;
+  color: #333; /* чёрный как значение у Здравницы ID */
+}
+
+/* Контейнер полосы */
+.resortsoft_paymentBar {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: #e6e6e6;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Заполнение */
+.resortsoft_paymentBar__fill {
+  height: 100%;
+  transition: width .3s ease;
+  border-radius: 5px;
+}
+
+/* Строка: [полоска] | XX% */
+.resortsoft_paymentBarRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* margin: 6px 0; */
+}
+
+/* Полоса должна тянуться в ширину */
+.resortsoft_paymentBarRow .resortsoft_paymentBar {
+  flex: 1;
+}
+
+/* Процент справа */
+.resortsoft_paymentPercent {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Цвета под состояния */
+.resortsoft_paymentBar__fill--none       { background: #f8bcbc; }
+.resortsoft_paymentBar__fill--low        { background: #ffd6b3; }
+.resortsoft_paymentBar__fill--medium     { background: #fff2b3; }
+.resortsoft_paymentBar__fill--high       { background: #a4d9ed; }
+.resortsoft_paymentBar__fill--full       { background: #c4e492; }
+.resortsoft_paymentBar__fill--overfull   { background: #e6d4f8; }
+.resortsoft_paymentBar__fill--default    { background: #e0e0e0; }
+

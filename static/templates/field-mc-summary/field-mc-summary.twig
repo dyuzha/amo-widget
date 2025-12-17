@@ -1,0 +1,34 @@
+<link type="text/css" rel="stylesheet" href="{{ settings.path }}/templates/{{ meta.filename }}/{{ meta.filename }}.css?v={{ settings.version }}">
+
+
+<div id="summaryForm">
+  <section class="profit_section resort_soft__container">
+    <div class="resortsoft_card">
+
+      <div class="resortsoft_card__paidPrice">
+
+        <div class="resortsoft_paidPriceRow">
+          <b>Оплачено</b>
+          <span class="resortsoft_paidPriceValue">{{ paidPrice }}</span>
+        </div>
+
+        <div class="resortsoft_paymentBarRow">
+          <div class="resortsoft_paymentBar">
+            <div
+              class="resortsoft_paymentBar__fill resortsoft_paymentBar__fill--{{ statePaid }}"
+              style="width: {{ percent }}%;"
+            ></div>
+          </div>
+          <span class="resortsoft_paymentPercent">{{ percent }}%</span>
+        </div>
+
+      </div>
+
+      <div class="resortsoft_card__id">
+        <b>Здравница ID</b><a class="resortsoft_card__button">{{zdravID}}</a>
+      </div>
+
+
+    </div>
+  </section>
+</div>

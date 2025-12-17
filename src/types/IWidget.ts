@@ -56,11 +56,24 @@ export interface IWidgetSettings {
   images_path: string;
   oauth_client_uuid: string;
   path: string;
-  status: 'not_configured' | 'installed';
   support: any[];
+  status: 'not_configured' | 'installed';
   version: string;
   widget_active: 'N' | 'Y';
+
   widget_code: string;
+  inn: string;
+  kpp: string;
+  alias: string;
+  check_in: string;
+  check_out: string;
+  note: string;
+  birthday: string;
+  sex: string;
+  zdrav_id: string;
+  status_booked: string;
+  paid_price: string;
+  created_at: string;
 }
 
 export interface ISystem {
@@ -108,5 +121,6 @@ export interface IWidget {
     }
   ) => any;
   get_settings(): IWidgetSettings;
+  set_settings(value: Record<string, any>): void;
   system(): ISystem;
 }

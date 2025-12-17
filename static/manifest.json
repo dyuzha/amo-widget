@@ -3,13 +3,10 @@
     "name": "widget.name",
     "description": "widget.description",
     "short_description": "widget.short_description",
-    "version": "1.0.4",
+    "version": "1.0.29",
     "interface_version": 2,
     "init_once": true,
-    "locale": [
-      "ru",
-      "en"
-    ],
+    "locale": ["ru"],
     "installation": true,
     "support": {
       "link": "https://www.amocrm.com",
@@ -41,7 +38,67 @@
     "x_api_key": {
       "name": "settings.x_api_key",
       "type": "text",
-      "required": true
+      "required": false
+    },
+    "inn": {
+      "name": "settings.inn",
+      "type": "text",
+      "required": false
+    },
+    "kpp": {
+      "name": "settings.kpp",
+      "type": "text",
+      "required": false
+    },
+    "alias": {
+      "name": "settings.alias",
+      "type": "text",
+      "required": false
+    },
+    "check_in": {
+      "name": "settings.check_in",
+      "type": "text",
+      "required": false
+    },
+    "check_out": {
+      "name": "settings.check_out",
+      "type": "text",
+      "required": false
+    },
+    "note": {
+      "name": "settings.note",
+      "type": "text",
+      "required": false
+    },
+    "birthday": {
+      "name": "settings.birthday",
+      "type": "text",
+      "required": false
+    },
+    "sex": {
+      "name": "settings.sex",
+      "type": "text",
+      "required": false
+    },
+    "status_booked": {
+      "name": "settings.status_booked",
+      "type": "text",
+      "required": false
+    },
+    "zdrav_id": {
+      "name": "settings.zdrav_id",
+      "type": "text",
+      "required": false
+    },
+    "paid_price": {
+      "name": "settings.paid_price",
+      "type": "text",
+      "required": false
+    },
+    "created_at": {
+      "name": "settings.created_at",
+      "type": "text",
+      "required": false
     }
   },
   "dp": {
