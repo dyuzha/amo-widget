@@ -22,7 +22,7 @@ export function renderBooked(widget: IWidgetExtended, elem: string) {
       checkOut: { type: "CFV", val: widget.params.check_out },
       note: { type: "CFV", val: widget.params.note },
       zdravID: { type: "CFV", val: widget.params.zdrav_id },
-      status: { type: "enumCFV", val: widget.params.status_booked },
+      status: { type: "CFV", val: widget.params.status_booked },
     }
   )
 

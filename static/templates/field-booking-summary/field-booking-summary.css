@@ -27,6 +27,7 @@
 .resortsoft_card__state--cancel    { background: #f8bcbc; color: #a55050; }
 .resortsoft_card__state--checkin   { background: #c4e492; color: #5b7357; }
 .resortsoft_card__state--checkout  { background: #c4e492; color: #5b7357; }
+.resortsoft_card__state--waiting   { background: #fff8b0; color: #a57c00; }
 
 
 .resortsoft_card__state {

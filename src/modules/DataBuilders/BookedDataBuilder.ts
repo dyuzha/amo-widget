@@ -81,19 +81,19 @@ export class BookedDataBuilder extends DataBuilder {
       checkout: this.checkOut?.() || '',
       zdravID: this.zdravID?.() || '',
       paidPrice: this.paidPrice?.() || '0',
-      stateBooked: this.stateBooked,
+      statusRu: this.statusRu,
       statePaid: this.statePaid,
       percent: String(this.paymentPerсent),
     };
   }
 
-  private get stateBooked(): string {
+  private get statusRu(): string {
     const map = new Map([
-      ["Забронировано", "booked"],
-      ["Отменено", "cancel"],
-      ["Проживает", "checkin"],
-      ["Выехал", "checkout"],
-      ["В ожидании", "waiting"],
+      ["booked", "Забронировано"],
+      ["cancel", "Отменено"],
+      ["checkin", "Проживает"],
+      ["checkout", "Выехал"],
+      ["waiting", "В ожидании"],
     ]);
     if (!this.status) {
       return '';

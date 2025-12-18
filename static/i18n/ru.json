@@ -6,7 +6,6 @@
     "tour_description": "Описание виджета"
   },
   "settings": {
-    "x_api_key": "X-API-Key",
     "kpp": "КПП",
     "inn": "ИНН",
     "alias": "Псевдоним организации",

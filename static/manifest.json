@@ -3,7 +3,7 @@
     "name": "widget.name",
     "description": "widget.description",
     "short_description": "widget.short_description",
-    "version": "1.0.29",
+    "version": "1.0.30",
     "interface_version": 2,
     "init_once": true,
     "locale": ["ru"],
@@ -35,11 +35,6 @@
     "tour_description": "widget.tour_description"
   },
   "settings": {
-    "x_api_key": {
-      "name": "settings.x_api_key",
-      "type": "text",
-      "required": false
-    },
     "inn": {
       "name": "settings.inn",
       "type": "text",
